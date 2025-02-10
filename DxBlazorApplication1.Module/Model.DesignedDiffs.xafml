@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="DxBlazorApplication1">
+  <ActionDesign>
+    <ActionToContainerMapping>
+      <ActionContainer Id="CustomSituatieActionsCategory" IsNewNode="True" />
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <NavigationItems>
+    <Items>
+      <Item Id="@50ffb7a8-2c9b-4b59-9232-3e965a44a307" Caption="Gestiuni" ImageName="BO_Appearance" ViewId="Gestiune_ListView" IsNewNode="True" />
+      <Item Id="@61f50b00-7a0b-42f5-bf98-9a64fcb66265" Caption="Intrari" ViewId="Intrare_ListView" ImageName="BO_Order_Item" IsNewNode="True" />
+      <Item Id="@8557056c-0722-46c5-bf4e-68a6abe812f7" Caption="Produse" ViewId="Produs_ListView" ImageName="BO_Product" IsNewNode="True" />
+      <Item Id="@8c1dd21e-5ee3-4aff-802f-01824bd2c74a" Caption="Iesiri" ImageName="BO_Order" ViewId="Iesire_ListView" IsNewNode="True" />
+      <Item Id="@c24ce311-f106-4c9f-bf88-bcc8a1d68623" Caption="Parteneri" ViewId="Partener_ListView" ImageName="BO_Person" IsNewNode="True" />
+      <Item Id="CustomSituatieNavigation" ViewId="CustomSituatieNonPersistent_DetailView" Caption="Situatie" IsNewNode="True" />
+    </Items>
+  </NavigationItems>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="24.2.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="CustomSituatieNonPersistent_DetailView">
+      <Items>
+        <ActionContainerViewItem Id="CustomSituatieActionsCategory" Caption="CustomSituatieActionsCategory(13)" IsNewNode="True" />
+        <DashboardViewItem Id="ItemSituatieNonPersistentItem" ViewId="ItemSituatieNonPersistent_ListView" IsNewNode="True" />
+        <PropertyEditor Id="OGestiune" Caption="O Singura Gestiune" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" Direction="Vertical" RelativeSize="100">
+            <LayoutGroup Id="CustomSituatieNonPersistent_col1" ShowCaption="False" Index="0" RelativeSize="100" Caption="CustomSituatieNonPersistent_col1" IsNewNode="True">
+              <LayoutItem Id="TipAfisare" ViewItem="TipAfisare" Index="0" RelativeSize="7.657657657657658" IsNewNode="True" />
+              <LayoutGroup Id="Autod06aa30a-a8a1-4167-b85f-831eb0862d5d" ShowCaption="False" Caption="Autod06aa30a-a8a1-4167-b85f-831eb0862d5d(5)" Direction="Horizontal" Index="1" RelativeSize="7.882882882882883" IsNewNode="True">
+                <LayoutItem Id="DataInceput" ViewItem="DataInceput" Index="0" RelativeSize="50.72463768115942" IsNewNode="True" />
+                <LayoutItem Id="DataSfarsit" ViewItem="DataSfarsit" Index="1" RelativeSize="49.27536231884058" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto2d8255d1-0fda-4c16-be40-c20984019601" ShowCaption="False" Caption="Auto2d8255d1-0fda-4c16-be40-c20984019601(8)" Index="2" RelativeSize="84.45945945945945" IsNewNode="True">
+                <LayoutItem Id="ToateGestiunile" ViewItem="ToateGestiunile" Index="0" RelativeSize="7.733333333333333" IsNewNode="True" />
+                <LayoutGroup Id="Autobabb03cb-7ae0-4f8b-91c3-87bb9c19a93e" ShowCaption="False" Caption="Autobabb03cb-7ae0-4f8b-91c3-87bb9c19a93e(10)" Direction="Vertical" Index="1" RelativeSize="92.26666666666667" IsNewNode="True">
+                  <LayoutGroup Id="Autobcd3c93c-d67b-43bc-8abe-31aad4bb37e7" ShowCaption="False" Caption="" Direction="Horizontal" Index="0" RelativeSize="19.942196531791907" IsNewNode="True">
+                    <LayoutGroup Id="Auto167e9603-52f3-4e07-9336-cc2a18a82d3f" ShowCaption="False" Caption="Auto167e9603-52f3-4e07-9336-cc2a18a82d3f(11)" Index="0" RelativeSize="51.368760064412236" IsNewNode="True">
+                      <LayoutItem Id="OGestiune" ViewItem="OGestiune" Index="0" RelativeSize="46.3768115942029" IsNewNode="True" />
+                      <LayoutItem Id="CustomSituatieActionsCategory" ViewItem="CustomSituatieActionsCategory" Index="1" RelativeSize="53.6231884057971" IsNewNode="True" />
+                    </LayoutGroup>
+                    <LayoutItem Id="Gestiune" ViewItem="Gestiune" Index="1" RelativeSize="48.631239935587764" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutItem Id="ItemSituatieNonPersistentItem" ViewItem="ItemSituatieNonPersistentItem" Index="1" RelativeSize="80.05780346820809" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="CustomSituatieNonPersistent" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Iesire_IesireDetalii_ListView">
+      <Columns>
+        <ColumnInfo Id="Produs" Width="200" />
+        <ColumnInfo Id="Cantitate" Width="94" />
+        <ColumnInfo Id="Valoare" Width="120" />
+      </Columns>
+    </ListView>
+    <ListView Id="Iesire_ListView" FreezeColumnIndices="False" />
+    <ListView Id="Intrare_IntrareDetalii_ListView" FreezeColumnIndices="True">
+      <Columns>
+        <ColumnInfo Id="cantitate" Index="-1" />
+        <ColumnInfo Id="ID" Index="-1" />
+        <ColumnInfo Id="IdIntrari" Index="-1" />
+        <ColumnInfo Id="produs" SortIndex="0" SortOrder="Ascending" Index="-1" />
+        <ColumnInfo Id="valoare" Index="-1" />
+        <ColumnInfo Id="Produs" Index="0" />
+        <ColumnInfo Id="Cantitate" Index="1" />
+        <ColumnInfo Id="Valoare" Index="2" />
+      </Columns>
+    </ListView>
+    <ListView Id="ItemSituatieNonPersistent_ListView" AllowDelete="False" AllowNew="False" />
+  </Views>
+</Application>

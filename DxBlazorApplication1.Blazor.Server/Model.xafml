@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems NavigationStyle="Accordion" />
+  <Options UIType="TabbedMDI" RestoreTabbedMdiLayout="True" ShowTabImage="True" />
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="24.2.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="Iesire_IesireDetalii_ListView" InlineEditMode="Batch" FreezeColumnIndices="True" AllowEdit="True" NewItemRowPosition="Top">
+      <Columns>
+        <ColumnInfo Id="ID" Index="-1" />
+        <ColumnInfo Id="Iesire" Index="-1" />
+        <ColumnInfo Id="Produs" Index="0" Width="310" />
+        <ColumnInfo Id="Cantitate" Index="1" Width="153" />
+        <ColumnInfo Id="Valoare" Index="2" Width="183" />
+      </Columns>
+    </ListView>
+    <ListView Id="Intrare_IntrareDetalii_ListView" NewItemRowPosition="Top" InlineEditMode="Batch" AllowEdit="True" />
+  </Views>
+</Application>
